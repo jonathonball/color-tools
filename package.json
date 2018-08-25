@@ -1,0 +1,19 @@
+{
+  "name": "color-tools",
+  "version": "0.0.1",
+  "description": "Convert between color formats and other helpful methods",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonathonball/color-tools.git"
+  },
+  "author": "Jon Ball",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jonathonball/color-tools/issues"
+  },
+  "homepage": "https://github.com/jonathonball/color-tools#readme"
+}
