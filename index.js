@@ -50,4 +50,10 @@ class Color {
         }
     }
 
+    hsvToRgb() {
+        let chroma = this.value
+    }
+
 }
+
+module.exports = Color;

@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jonathonball/color-tools/issues"
   },
-  "homepage": "https://github.com/jonathonball/color-tools#readme"
+  "homepage": "https://github.com/jonathonball/color-tools#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
 }
