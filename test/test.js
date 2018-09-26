@@ -22,4 +22,7 @@ describe('Color', function() {
             });
         });
     });
+    describe('#rgbToHsv', function() {
+        
+    });
 });
