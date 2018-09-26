@@ -51,7 +51,47 @@ class Color {
     }
 
     hsvToRgb() {
-        let chroma = this.value
+        // https://en.wikipedia.org/wiki/HSL_and_HSV#From_HSV
+        let chroma = this.value * this.saturation;
+        let trueHue = this.hue / 60;
+        let x = chroma * (1 - Math.abs((trueHue % 2) - 1));
+        if (isNaN(trueHue)) {
+            this.red = 0;
+            this.green = 0;
+            this.blue = 0;
+        } else if (0 <= trueHue <= 1) {
+            this.red = chroma;
+            this.green = x;
+            this.blue = 0;
+        } else if (1 < trueHue <= 2) {
+            this.red = x;
+            this.green = chroma;
+            this.blue = 0;
+        } else if (2 < trueHue <= 3) {
+            this.red = 0;
+            this.green = chroma;
+            this.blue = x;
+        } else if (3 < trueHue <= 4) {
+            this.red = 0;
+            this.blue = x;
+            this.green = chroma;
+        } else if (4 < trueHue <= 5) {
+            this.red = x;
+            this.blue = 0;
+            this.green = chroma;
+        } else if (5 < trueHue <= 6) {
+            this.red = chroma;
+            this.blue = 0;
+            this.green = x;
+        } else {
+            this.red = 0;
+            this.blue = 0;
+            this.green = 0;
+        }
+        let m = this.value - chroma;
+        this.red += m;
+        this.blue += m;
+        this.green += m;
     }
 
 }
