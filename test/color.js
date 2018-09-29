@@ -1,5 +1,5 @@
 var assert = require('assert');
-var Color = require('..');
+var {Color} = require('../lib/color');
 
 describe('Color', function() {
     describe('#getRgb()', function() {
