@@ -1,3 +1,3 @@
-const Color = require('./lib/color');
+const Color = require('./lib');
 
 module.exports = Color;
