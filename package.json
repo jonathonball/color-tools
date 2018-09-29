@@ -4,10 +4,13 @@
   "description": "Convert between color formats and other helpful methods",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "nyc mocha",
     "jshint": "jshint -c .jshintrc --exclude-path .gitignore ."
   },
-  "pre-commit": [ "jshint", "test" ],
+  "pre-commit": [
+    "jshint",
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jonathonball/color-tools.git"
@@ -20,6 +23,7 @@
   "homepage": "https://github.com/jonathonball/color-tools#readme",
   "devDependencies": {
     "mocha": "^5.2.0",
+    "nyc": "^13.0.1",
     "pre-commit": "^1.2.2"
   }
 }
