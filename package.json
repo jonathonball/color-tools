@@ -4,7 +4,8 @@
   "description": "Convert between color formats and other helpful methods",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "jshint": "jshint -c .jshintrc --exclude-path .gitignore ."
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,8 @@
   },
   "homepage": "https://github.com/jonathonball/color-tools#readme",
   "devDependencies": {
-    "mocha": "^5.2.0"
-  }
+    "mocha": "^5.2.0",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": [ "jshint", "test" ]
 }
